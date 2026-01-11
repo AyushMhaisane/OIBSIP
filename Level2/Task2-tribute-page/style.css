@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0d0d0d;
+    color: #ffffff;
+    font-family: 'Playfair Display', serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding-top: 50px;
+    margin-bottom: 50px;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    background: linear-gradient(to right, #ffffff, #a8a8a8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.dates {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-family: 'Lato', sans-serif;
+    color: #888;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    flex-wrap: wrap;
+}
+
+.quote-box {
+    flex: 1;
+    padding-right: 40px;
+    font-size: 1.8rem;
+    font-style: italic;
+    line-height: 1.5;
+    font-family: 'Lato', sans-serif;
+    border-left: 4px solid #3b82f6;
+    padding-left: 20px;
+}
+
+.image-box {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.image-box img {
+    max-width: 100%;
+    height: auto;
+    width: 350px;
+    filter: grayscale(100%);
+    border-radius: 15px;
+    transition: filter 0.5s;
+    box-shadow: -10px 10px 30px rgba(0,0,0,0.5);
+}
+
+.image-box img:hover {
+    filter: grayscale(0%);
+}
+
+.biography, .timeline-section, .books-section {
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    color: #cccccc;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #333;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.timeline {
+    text-align: left;
+    border-left: 2px solid #333;
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+.timeline-item {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #3b82f6;
+    border-radius: 50%;
+    position: absolute;
+    left: -26px;
+    top: 6px;
+}
+
+.year {
+    font-weight: bold;
+    color: #3b82f6;
+    margin-right: 10px;
+}
+
+.book-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.book-card {
+    background: #1a1a1a;
+    padding: 20px 40px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    transition: transform 0.3s;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    border-color: #3b82f6;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding-bottom: 40px;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.line {
+    width: 200px;
+    height: 1px;
+    background-color: #333;
+    margin: 0 auto 20px auto;
+}
+
+.wiki-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 1px solid #333;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.wiki-btn:hover {
+    background: #333;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    
+    .quote-box {
+        padding-right: 0;
+        margin-top: 30px;
+        border-left: none;
+        border-top: 4px solid #3b82f6;
+        padding-top: 20px;
+    }
+    
+    .image-box {
+        justify-content: center;
+    }
+}
