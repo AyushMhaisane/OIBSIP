@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secured Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script>
+        const currentUser = localStorage.getItem("currentUser");
+        if (!currentUser) {
+            window.location.href = "index.html"; // Redirect if not logged in
+        }
+    </script>
+
+    <div class="dashboard-container">
+        <nav>
+            <h3>SecureApp</h3>
+            <button onclick="logout()" class="logout-btn">Logout</button>
+        </nav>
+        
+        <div class="content">
+            <div class="welcome-card">
+                <h1>Hello, <span id="user-name">User</span>! 👋</h1>
+                <p>You have successfully accessed the secured dashboard area.</p>
+            </div>
+            
+            <div class="grid">
+                <div class="card">
+                    <h4>Profile Status</h4>
+                    <p>Active & Verified</p>
+                </div>
+                <div class="card">
+                    <h4>Security Level</h4>
+                    <p>High Priority</p>
+                </div>
+                <div class="card">
+                    <h4>Last Login</h4>
+                    <p id="time-display">Just now</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Display user name
+        const user = JSON.parse(localStorage.getItem("user_" + currentUser));
+        document.getElementById("user-name").innerText = user ? user.name : "Guest";
+    </script>
+</body>
+</html>

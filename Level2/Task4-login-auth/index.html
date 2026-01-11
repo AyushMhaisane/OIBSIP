@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login System</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="overlay">
+        <div class="auth-container">
+            <div class="icon-circle">
+                <svg viewBox="0 0 24 24" width="32" height="32" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </div>
+            
+            <div id="login-form">
+                <h2>Welcome back!</h2>
+                <p class="subtitle">Enter your credentials to access your account.</p>
+                
+                <form onsubmit="handleLogin(event)">
+                    <div class="input-group">
+                        <label>Email</label>
+                        <input type="email" id="login-email" placeholder="name@example.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Password</label>
+                        <input type="password" id="login-pass" placeholder="••••••••" required>
+                    </div>
+                    <button type="submit" class="primary-btn">Continue</button>
+                </form>
+                
+                <div class="divider">OR</div>
+                <p class="switch-text">Don't have an account? <span onclick="toggleForms()">Sign up</span></p>
+            </div>
+
+            <div id="register-form" style="display: none;">
+                <h2>Create Account</h2>
+                <p class="subtitle">Join us to access secured content.</p>
+                
+                <form onsubmit="handleRegister(event)">
+                    <div class="input-group">
+                        <label>Full Name</label>
+                        <input type="text" id="reg-name" placeholder="John Doe" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Email</label>
+                        <input type="email" id="reg-email" placeholder="name@example.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Password</label>
+                        <input type="password" id="reg-pass" placeholder="Create a strong password" required>
+                    </div>
+                    <button type="submit" class="primary-btn">Create Account</button>
+                </form>
+                
+                <div class="divider">OR</div>
+                <p class="switch-text">Already have an account? <span onclick="toggleForms()">Log in</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
