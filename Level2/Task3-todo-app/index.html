@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster To-Do App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="main-container">
+        <header>
+            <h1>TaskMaster</h1>
+            <p>Manage your daily goals effectively</p>
+        </header>
+
+        <div class="content-wrapper">
+            <div class="input-section">
+                <h2>New Task</h2>
+                <input type="hidden" id="task-id">
+                <div class="form-group">
+                    <label for="task-title">Title</label>
+                    <input type="text" id="task-title" placeholder="e.g., Buy Groceries">
+                </div>
+                <div class="form-group">
+                    <label for="task-desc">Description</label>
+                    <textarea id="task-desc" rows="3" placeholder="e.g., Milk, Eggs, Bread..."></textarea>
+                </div>
+                <button id="add-btn" onclick="saveTask()">Add Task</button>
+                <button id="cancel-btn" onclick="resetForm()" style="display: none; background-color: #ef4444;">Cancel Edit</button>
+            </div>
+
+            <div class="lists-section">
+                <div class="list-container">
+                    <h3>Pending Tasks</h3>
+                    <div id="pending-list" class="task-list"></div>
+                </div>
+
+                <div class="list-container completed-section">
+                    <h3>Completed Tasks</h3>
+                    <div id="completed-list" class="task-list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
