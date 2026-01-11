@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #4a90e2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator {
+    background-color: #f0f4f8;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 350px;
+}
+
+.display-screen {
+    background-color: #dbeafe;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: right;
+    color: #1e3a8a;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#history {
+    font-size: 14px;
+    color: #64748b;
+    min-height: 20px;
+}
+
+#result {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+button {
+    border: none;
+    border-radius: 8px;
+    padding: 15px 0;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.1s, background-color 0.2s;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.btn {
+    background-color: #dbeafe;
+    color: #1e3a8a;
+}
+
+.btn.func {
+    background-color: #bfdbfe;
+}
+
+.btn.operator {
+    background-color: #93c5fd;
+}
+
+.enter-btn {
+    grid-column: span 2;
+    background-color: #4a90e2;
+    color: white;
+}
+
+.enter-btn:hover {
+    background-color: #357abd;
+}
